@@ -4,12 +4,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  Validate:
     runs-on: ubuntu-latest
     steps:
     - name : Run EC Validate (keyless)
       uses: enterprise-contract/action-validate-image@v1.0.1
       with:
-        image: ghcr.io/enterprise-contract/golden-container:latest
-        identity: https:\/\/github\.com\/(slsa-framework\/slsa-github-generator|lauren-plane\/golden-container)\/
+        image: ghcr.io/seanconroy2021/action_demo:latest
+        identity: https:\/\/github\.com\/(slsa-framework\/slsa-github-generator|lauren-plane\/action_demo)\/
         issuer: https://token.actions.githubusercontent.com
